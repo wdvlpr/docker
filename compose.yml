@@ -1,0 +1,9 @@
+version: '3.4'
+services:
+    srv:
+        image: httpd
+        container_name: srv
+        ports:
+          - 8000:80
+        volumes:
+          - ./website:/usr/local/apache2/htdocs/
