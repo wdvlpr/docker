@@ -1,9 +1,9 @@
-version: '3.4'
+version: '3.9'
 services:
-    srv:
-        image: httpd
-        container_name: srv
-        ports:
-          - 8000:80
-        volumes:
-          - ./website:/usr/local/apache2/htdocs/
+  apache:
+    image: httpd:latest
+    container_name: my-apache-app
+    ports:
+    - '80:80'
+    volumes:
+    - ./website:/usr/local/apache2/htdocs
